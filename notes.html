@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git notes</title>
+  </head>
+  <body>
+    <h1>Git & Github</h1>
+    <p><h3>origin: It is the name given to the remote repository.</h3></p>
+    <div class="storage_areas">
+      <h2>Storage Areas</h2>
+      <ol>
+        <li>Working Directory</li>
+        Our own current files.
+        <li>Staging area</li>
+        When we use git add then changes are stored in stagin area.
+        <li>Local area</li>
+        When we commit then the changes from the staging area are saved in local
+        repository inside the .git directory.
+        <li>Remote Repository</li>
+        A repository on the server like GitHub.
+      </ol>
+    </div>
+    <div class="git_heads">
+      <p>
+        In Git, HEAD is a reference to the latest commit on the currently
+        checked-out branch. It tells Git where you currently are in the commit
+        history.
+      </p>
+    </div>
+    <div class="log">
+      <h2>logs</h2>
+      <ol>
+        <p>
+          Logs are the registered history of our commits in every single file or
+          branch we can get them by filename or branch name and also of between
+          given time frame.
+        </p>
+        <li>git log</li>
+        To see all logs;
+        <li>git checkout &lt log number &gt</li>
+        This brings us to the intended log but doesn't delete the later logs it
+        takes us in "detached Head state" means to that log's state
+        <li>git checkout branchname</li>
+        This command can revert the above command .
+        <li>detached head state</li>
+        Any changes made in this state won't be added to any branch unless
+        specifically added to a branch.
+      </ol>
+    </div>
+    <div class="reflogs">
+        <h2>Reflogs</h2>
+      <p>
+        git reflog (Reference Log) is a powerful Git command that keeps track of
+        all movements of the HEAD, including checkouts, commits, resets, merges,
+        rebases and reverts. It helps you recover lost commits or switch back to
+        previous states even if they are not part of a branch.
+      </p>
+      <p>So, it can help us in recovering commits, branches, checkouts etc.</p>
+    </div>
+    <div class="branch">
+        <h2>Branches</h2>
+        <p>
+            A branch in Git is a separate line of development that allows you to work on new features, bug fixes, or experiments without affecting the main codebase.
+        </p>
+        <ol>
+            <h3>commands</h3>
+            <li>git branch
+            </li>
+            Lists all branches.
+            <li>git branch -a
+            </li>
+            Lists all local and remote branches (remotes/origin/master)
+            <h3>commands</h3>
+            <li>git checkout branchname</li>
+            
+        </ol>
+    </div>
+    <div class="stash">
+        <h2>Git Stash</h2>
+        <p>It is a powerful command in Git that allows you to temporarily save changes in your working directory that you aren't ready to commit yet. It stores your modified (and optionally staged) changes in a "stash" and reverts your working directory to the last committed state. This is especially useful if you need to switch branches or work on something else without losing your uncommitted changes.</p>
+        <ol>
+            <h3>commands</h3>
+        <li>git stash</li>
+        This saves your changes (both staged and unstaged) and resets your working directory to match the last commit.
+        <li>git stash list</li>
+        Lists all stashes indexed.
+        <li>git stash apply</li>
+        To apply changes of most recent stash but keeps in stash list.
+        <li>git stash apply stash@{index}</li>
+        To apply a specific stash.
+        <li>git stash drop stash@{index}</li>
+        <li>git stash pop</li>
+        This applies the recent stash and removes it from stash list.
+        <li>git stash push -k</li>
+        Stashes only unstaged changes.
+        <li>git stash push -m "Your message here"</li>
+        Adds a descriptive message to your stash.
+        <li>git stash clear</li>
+        To remove all stashes
+        </ol>
+    </div>
+  </body>
+</html>
